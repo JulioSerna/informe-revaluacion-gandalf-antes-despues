@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Ejecutivo: Auditoría y Corrección de Revaluación Gandalf (Antes vs. Después) | Vauxoo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --vx-primary: #AC0340;
+      --vx-primary-hover: #891A2F;
+      --vx-secondary: #455A64;
+      --vx-dark: #282C2F;
+      --vx-accent: #E4A900;
+      --vx-surface-accent: #DCEFFE;
+      --vx-bg: #F8FAFC;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--vx-dark);
+      background-color: var(--vx-bg);
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .badge-cliente {
+      background-color: #E0F2FE;
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+    }
+    .badge-proveedor {
+      background-color: #FEF3C7;
+      color: #B45309;
+      border: 1px solid #FDE68A;
+    }
+    .badge-cuadrado {
+      background-color: #DCFCE7;
+      color: #15803D;
+      border: 1px solid #BBF7D0;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header Institucional Vauxoo -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-4">
+        <svg class="h-9 w-auto" viewBox="0 0 656.41 147.73" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="m263.71,65.43l-21,49c-.11.26-.36.42-.64.42h-12.76c-.36,0-.66-.29-.67-.65,0-.1.02-.19.06-.28l35-80.72c.15-.34.55-.49.89-.33.15.07.27.19.33.33l35.14,80.72c.15.33,0,.72-.33.87-.09.04-.18.06-.28.06h-12.82c-.27,0-.52-.17-.63-.42l-21-49c-.14-.36-.53-.54-.89-.4-.18.07-.33.22-.4.4Z" fill="#282C2F"/>
+          <path d="m200.56,82.29l21-49c.11-.25.36-.42.63-.42h12.81c.36,0,.66.29.67.65,0,.1-.02.19-.06.28l-35,80.72c-.14.34-.53.5-.86.36-.16-.07-.29-.2-.36-.36l-35.22-80.75c-.15-.33,0-.72.33-.87.09-.04.18-.06.28-.06h12.86c.27,0,.52.17.63.42l21,49c.13.36.52.55.88.42.19-.07.34-.21.41-.39Z" fill="#282C2F"/>
+          <path d="m320.57,108.29c-3.15-2.37-5.68-5.45-7.39-9-1.91-3.94-2.87-8.27-2.8-12.64v-53.14c0-.37.3-.67.67-.67h11.65c.37,0,.67.3.67.67h0v53.18c0,4.92,1.79,8.73,5.15,11.3,3.68,2.65,8.12,4.03,12.65,3.92,4.52.07,8.95-1.3,12.64-3.92,3.36-2.57,5-6.38,5-11.3v-53.18c0-.37.29-.66.66-.67h11.77c.37,0,.67.3.67.67h0v53.18c.02,4.37-.94,8.69-2.8,12.64-1.78,3.5-4.3,6.57-7.39,9-12.32,8.8-28.87,8.8-41.19,0l.04-.04Z" fill="#282C2F"/>
+          <path d="m442.24,114.32l-20.94-30.67c-.2-.31-.62-.4-.93-.19-.08.05-.14.12-.19.19l-20.84,30.67c-.24.36-.65.57-1.08.57h-14.21c-.36,0-.65-.3-.64-.66,0-.12.04-.24.1-.34l28.89-42.5c.16-.23.16-.53,0-.76l-25-36.74c-.19-.31-.09-.72.22-.91.1-.06.2-.09.32-.09h14.21c.43,0,.84.22,1.09.57l17,24.92c.2.31.62.4.93.19.08-.05.14-.12.19-.19l17.01-24.95c.24-.36.65-.57,1.08-.57h14.22c.36.01.65.32.63.68,0,.11-.04.22-.09.32l-25.13,36.75c-.15.23-.15.54,0,.77l29,42.49c.19.3.1.7-.2.9-.1.07-.22.1-.34.1h-14.21c-.43,0-.84-.2-1.09-.55Z" fill="#282C2F"/>
+          <path d="m503.37,32.84c-22.64,0-41,18.36-41,41s18.36,41,41,41,41-18.36,41-41-18.36-41-41-41Zm0,68.93c-15.41,0-27.9-12.49-27.9-27.9,0-15.41,12.49-27.9,27.9-27.9,15.41,0,27.9,12.49,27.9,27.9s-12.49,27.9-27.9,27.9h0Z" fill="#891A2F"/>
+          <path d="m599,32.84c-22.64,0-41,18.36-41,41s18.36,41,41,41,41-18.36,41-41-18.36-41-41-41Zm0,68.93c-15.41,0-27.9-12.49-27.9-27.9s12.49-27.9,27.9-27.9,27.9,12.49,27.9,27.9-12.49,27.9-27.9,27.9h0Z" fill="#891A2F"/>
+          <path d="m107.12,98.48l-25.06-24.61,25.06-24.62,23.55,23.18c.83.8.85,2.11.06,2.94-.02.02-.04.04-.06.06l-23.55,23.05Z" fill="#9E103B"/>
+          <polygon points="94.59 86.18 82.06 73.87 94.59 61.56 107.12 73.87 94.59 86.18" fill="#891A2F"/>
+          <path d="m119.65,86.17l11-10.82c.83-.8.85-2.11.06-2.94-.02-.02-.04-.04-.06-.06l-11-10.82-12.53,12.34,12.53,12.3Z" fill="#AC0340"/>
+          <path d="m40.59,98.48l25.06-24.61-25.06-24.62-23.54,23.18c-.83.79-.86,2.1-.07,2.93.02.03.05.05.07.07l23.54,23.05Z" fill="#9E103B"/>
+          <polygon points="53.12 86.18 65.65 73.87 53.12 61.56 40.59 73.87 53.12 86.18" fill="#891A2F"/>
+          <path d="m28.06,86.17l-11-10.82c-.83-.79-.86-2.1-.07-2.93.02-.03.05-.05.07-.07l11-10.82,12.53,12.34-12.53,12.3Z" fill="#AC0340"/>
+          <path d="m98.47,107.13l-24.61-25.06-24.62,25.06,23.13,23.55c.8.83,2.11.85,2.94.06.02-.02.04-.04.06-.06l23.1-23.55Z" fill="#9E103B"/>
+          <polygon points="86.17 94.6 73.86 82.07 61.55 94.6 73.86 107.13 86.17 94.6" fill="#891A2F"/>
+          <path d="m86.16,119.66l-10.82,11c-.8.83-2.11.85-2.94.06-.02-.02-.04-.04-.06-.06l-10.82-11,12.34-12.53,12.3,12.53Z" fill="#AC0340"/>
+          <path d="m49.24,40.6l24.62,25.06,24.61-25.06-23.13-23.54c-.79-.83-2.1-.86-2.93-.07-.03.02-.05.05-.07.07l-23.1,23.54Z" fill="#D6DAE0"/>
+          <polygon points="61.55 53.13 73.86 65.66 86.17 53.13 73.86 40.6 61.55 53.13" fill="#C7CDD5"/>
+          <path d="m61.55,28.07l10.82-11.01c.79-.83,2.1-.86,2.93-.07.03.02.05.05.07.07l10.82,11-12.33,12.54-12.31-12.53Z" fill="#E0E2E6"/>
+        </svg>
+        <span class="text-sm font-semibold tracking-wider text-gray-500 uppercase border-l pl-3 border-gray-300">Auditoría Financiera & Gandalf</span>
+      </div>
+      <div class="flex items-center gap-3 text-xs">
+        <span class="px-3 py-1 rounded-full font-medium" style="background-color: var(--vx-surface-accent); color: #0284C7;">Staging: dev.odoo.com (Build 40163092)</span>
+        <span class="px-3 py-1 rounded-full font-medium bg-green-100 text-green-800">Corte: 30/09/2026 | TC 17.8413</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <!-- Hero / Título Ejecutivo -->
+    <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-red-700 bg-red-50 px-2.5 py-1 rounded border border-red-200">Informe de Resolución Técnica</span>
+          <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">Auditoría y Corrección de Revaluación Gandalf</h1>
+          <p class="text-sm text-gray-600 mt-1">Dictamen sobre diferencias en cuentas por cobrar/pagar al 30 de septiembre de 2026 y comparativa de efectividad <strong>Antes vs. Después</strong>.</p>
+        </div>
+        <div class="text-right">
+          <span class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-bold bg-green-500 text-white shadow-sm">
+            ✓ 100% Corregido y Cuadrado
+          </span>
+          <p class="text-xs text-gray-500 mt-1">0 facturas restantes con diferencia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPIs Antes vs Después -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <p class="text-xs font-semibold text-gray-500 uppercase">Facturas con Diferencia</p>
+        <div class="mt-2 flex items-baseline gap-3">
+          <span class="text-2xl font-bold text-red-600 line-through">185</span>
+          <span class="text-3xl font-extrabold text-green-600">0</span>
+        </div>
+        <p class="text-xs text-gray-500 mt-1">100% de facturas liquidadas</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <p class="text-xs font-semibold text-gray-500 uppercase">Descuadre en Clientes (CXC)</p>
+        <div class="mt-2 flex items-baseline gap-3">
+          <span class="text-lg font-bold text-red-600 line-through">$196,442</span>
+          <span class="text-2xl font-extrabold text-green-600">$0.00</span>
+        </div>
+        <p class="text-xs text-gray-500 mt-1">122 facturas de 9 clientes</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <p class="text-xs font-semibold text-gray-500 uppercase">Descuadre en Proveedores (CXP)</p>
+        <div class="mt-2 flex items-baseline gap-3">
+          <span class="text-lg font-bold text-red-600 line-through">$135,932</span>
+          <span class="text-2xl font-extrabold text-green-600">$0.00</span>
+        </div>
+        <p class="text-xs text-gray-500 mt-1">63 facturas de 3 proveedores</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <p class="text-xs font-semibold text-gray-500 uppercase">Impacto Total Resuelto</p>
+        <div class="mt-2 flex items-baseline gap-3">
+          <span class="text-lg font-bold text-red-600 line-through">$332,374</span>
+          <span class="text-2xl font-extrabold text-green-600">$0.00 MXN</span>
+        </div>
+        <p class="text-xs text-green-600 font-semibold mt-1">Efectividad del 100%</p>
+      </div>
+    </div>
+
+    <!-- Comparativa Antes vs Después por Partner -->
+    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div class="px-6 py-5 border-b border-gray-200 bg-gray-50 flex justify-between items-center">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">1. Resumen Comparativo por Partner (Antes vs. Después)</h2>
+          <p class="text-xs text-gray-600 mt-0.5">Comportamiento del saldo en cuenta complementaria al 30/09/2026 antes y después de aplicar el fix quirúrgico.</p>
+        </div>
+        <span class="text-xs font-bold px-3 py-1 rounded bg-green-100 text-green-800">12 Partners Auditados</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+          <thead class="bg-gray-100 text-gray-600 font-semibold text-xs uppercase">
+            <tr>
+              <th class="py-3 px-4 text-left">Partner</th>
+              <th class="py-3 px-4 text-center">Rol</th>
+              <th class="py-3 px-4 text-center">Facturas</th>
+              <th class="py-3 px-4 text-right">Saldo USD al 30/09</th>
+              <th class="py-3 px-4 text-right">Descuadre ANTES (MXN)</th>
+              <th class="py-3 px-4 text-right">Descuadre DESPUÉS (MXN)</th>
+              <th class="py-3 px-4 text-center">Estatus</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">KROMBERG & SCHUBERT MEXICO LE</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">58</td>
+              <td class="py-3 px-4 text-right">$913,862.24</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$157,904.11</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 bg-red-50/20">
+              <td class="py-3 px-4 font-semibold text-gray-900">EC LOGISTICS WORLDWIDE DE MEXICO</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">30</td>
+              <td class="py-3 px-4 text-right">$210,574.50</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$13,511.93</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">VTS CARRIERS, LLC</td>
+              <td class="py-3 px-4 text-center"><span class="badge-proveedor text-xs px-2.5 py-0.5 rounded-full font-medium">Proveedor</span></td>
+              <td class="py-3 px-4 text-center font-bold">31</td>
+              <td class="py-3 px-4 text-right">-$2,680,439.97</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$95,122.98</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">REYCAR GO</td>
+              <td class="py-3 px-4 text-center"><span class="badge-proveedor text-xs px-2.5 py-0.5 rounded-full font-medium">Proveedor</span></td>
+              <td class="py-3 px-4 text-center font-bold">29</td>
+              <td class="py-3 px-4 text-right">-$80,490.68</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$37,673.58</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">COMERCIALIZADORA AGRESTE</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">12</td>
+              <td class="py-3 px-4 text-right">$466,186.50</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$16,314.10</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">EC LOGISTICS WORLDWIDE LLC</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">12</td>
+              <td class="py-3 px-4 text-right">$3,010.00</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$729.10</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">ZEBRA LOGISTICS, INC</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">3</td>
+              <td class="py-3 px-4 text-right">$8,306.50</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$2,975.52</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">RACING CARGO USA, INC</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">3</td>
+              <td class="py-3 px-4 text-right">$7,100.00</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$3,413.67</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">ALCALA EXPRESS LLC</td>
+              <td class="py-3 px-4 text-center"><span class="badge-proveedor text-xs px-2.5 py-0.5 rounded-full font-medium">Proveedor</span></td>
+              <td class="py-3 px-4 text-center font-bold">3</td>
+              <td class="py-3 px-4 text-right">-$11,390.00</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$3,135.02</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">AGRICOLA ZARATTINI</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">2</td>
+              <td class="py-3 px-4 text-right">$33,440.43</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$631.03</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">YUSEN LOGISTICS (MEXICO)</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">1</td>
+              <td class="py-3 px-4 text-right">$13,587.28</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$832.75</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold text-gray-900">AUTOTRANSPORTES PIRAMIDE</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cliente text-xs px-2.5 py-0.5 rounded-full font-medium">Cliente</span></td>
+              <td class="py-3 px-4 text-center font-bold">1</td>
+              <td class="py-3 px-4 text-right">$580.00</td>
+              <td class="py-3 px-4 text-right text-red-600 font-bold">$129.82</td>
+              <td class="py-3 px-4 text-right text-green-600 font-bold">$0.00</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-medium">✓ Cuadrado</span></td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-gray-100 font-bold text-gray-900">
+            <tr>
+              <td class="py-3 px-4">TOTAL CONSOLIDADO</td>
+              <td class="py-3 px-4 text-center">12 Partners</td>
+              <td class="py-3 px-4 text-center">185</td>
+              <td class="py-3 px-4 text-right">—</td>
+              <td class="py-3 px-4 text-right text-red-600">$332,373.61</td>
+              <td class="py-3 px-4 text-right text-green-600">$0.00 MXN</td>
+              <td class="py-3 px-4 text-center"><span class="badge-cuadrado text-xs px-2 py-0.5 rounded-full font-bold">100% RESUELTO</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- Casos de Muestra Emblemáticos -->
+    <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">2. Análisis de Casos de Muestra Documentados por el Cliente</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Caso 1: INV/2026/18134 (Hoja EJERCICIO) -->
+        <div class="border border-gray-200 rounded-lg p-5 bg-gray-50">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-bold text-red-800 bg-red-100 px-2 py-0.5 rounded">Caso Hoja EJERCICIO del Cliente</span>
+            <span class="badge-cuadrado text-xs px-2 py-0.5 rounded font-bold">Resuelto $0.00</span>
+          </div>
+          <h3 class="font-bold text-base text-gray-900 mt-2">Factura INV/2026/18134 (EC LOGISTICS)</h3>
+          <p class="text-xs text-gray-600 mt-1">Importe: <strong>$5,452.00 USD</strong> | Saldo Base: <strong>$92,916.80 MXN</strong></p>
+          
+          <div class="mt-4 space-y-2 text-xs">
+            <div class="p-2.5 bg-red-50 border border-red-200 rounded text-red-800">
+              <p class="font-semibold">⚠️ Situación reportada por el cliente:</p>
+              <p class="mt-0.5">Se creó la póliza <code class="font-bold">REV/2026/09/002498</code> al 01/09/2026 con abono de -$4,353.57 MXN que cancelaba la revaluación del 30/09/2026, dejando el saldo desfasado.</p>
+            </div>
+            <div class="p-2.5 bg-green-50 border border-green-200 rounded text-green-800">
+              <p class="font-semibold">✓ Estado actual tras la corrección:</p>
+              <p class="mt-0.5">Asiento del 01/09/2026 <strong>eliminado al 100%</strong>. Se mantiene viva la póliza <code class="font-bold">REV/2026/09/005501</code> al 30/09 (+4,353.97 MXN). El saldo cuadra exactamente en <strong>$97,270.77 MXN</strong> (5,452 USD × 17.8413). La cancelación se aplica hasta el cobro el 02/10.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 2: INV/2026/17857 -->
+        <div class="border border-gray-200 rounded-lg p-5 bg-gray-50">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">Caso de Validación Inicial</span>
+            <span class="badge-cuadrado text-xs px-2 py-0.5 rounded font-bold">Resuelto $0.00</span>
+          </div>
+          <h3 class="font-bold text-base text-gray-900 mt-2">Factura INV/2026/17857 (EC LOGISTICS)</h3>
+          <p class="text-xs text-gray-600 mt-1">Importe: <strong>$1,150.00 USD</strong> | Saldo Base: <strong>$19,487.90 MXN</strong></p>
+          
+          <div class="mt-4 space-y-2 text-xs">
+            <div class="p-2.5 bg-red-50 border border-red-200 rounded text-red-800">
+              <p class="font-semibold">⚠️ Situación reportada por el cliente:</p>
+              <p class="mt-0.5">Descuadre de -$1,029.60 MXN en el reporte de Cuenta Antigua por Cobrar al 30/09/2026 por anulación prematura al 01/09/2026.</p>
+            </div>
+            <div class="p-2.5 bg-green-50 border border-green-200 rounded text-green-800">
+              <p class="font-semibold">✓ Estado actual tras la corrección:</p>
+              <p class="mt-0.5">Póliza del 01/09/2026 eliminada. Saldo total en libros al 30/09/2026: <strong>$20,517.50 MXN</strong> (1,150 USD × 17.8413). Diferencia al centavo: <strong>$0.00 MXN</strong>. Cierre efectivo trasladado a la fecha del pago (02/10).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dictamen y Respuestas a los Puntos de la Carta -->
+    <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 space-y-6">
+      <h2 class="text-lg font-bold text-gray-900 border-b pb-3">3. Respuestas Ejecutivas a las Solicitudes de Sinergy</h2>
+
+      <div class="space-y-4 text-sm">
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 text-base">Punto 1: Causa raíz, alcance y corrección de las diferencias</h4>
+          <p class="text-gray-600 mt-1 leading-relaxed">
+            <strong>Causa Raíz:</strong> Las facturas observadas se cobraron/pagaron durante los primeros días de octubre (ej. 02/10/2026). Al correrse la revaluación de septiembre en fecha posterior (14 de octubre), el sistema detectó que la factura ya estaba en estatus pagada y detonó una regla de limpieza en el primer día del mes abierto (<code class="font-bold">01/09/2026</code>), asumiendo erróneamente que la factura ya estaba pagada en septiembre.<br>
+            <strong>Alcance y Corrección:</strong> El alcance total fue de <strong>185 facturas en 12 partners</strong> con un impacto de $332,373.61 MXN. La corrección ya fue aplicada en Staging con el commit <code class="font-bold">e216189</code> y todas las partidas quedaron cuadradas al 100% ($0.00 de diferencia). Se descartó cualquier afectación en otros periodos anteriores.
+          </p>
+        </div>
+
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 text-base">Punto 2: Facturas con Notas de Crédito (NC) aplicadas</h4>
+          <p class="text-gray-600 mt-1 leading-relaxed">
+            <strong>Confirmación y Automatización:</strong> Es 100% correcto que al conciliar una factura con una Nota de Crédito el sistema debe neutralizar la revaluación previa. En la versión actual de Gandalf, <strong>el proceso es totalmente automático</strong>: al ejecutar la revaluación, Odoo detecta la conciliación parcial contra la NC y genera la póliza de ajuste correspondiente sin requerir reversas manuales por parte del equipo contable.
+          </p>
+        </div>
+
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 text-base">Punto 3: Asientos de revaluación creados el 01/10</h4>
+          <p class="text-gray-600 mt-1 leading-relaxed">
+            <strong>Explicación Técnica:</strong> La generación de pólizas el primer día de un mes ocurre exclusivamente cuando la fecha económica de la revaluación se encuentra en un periodo fiscal cerrado por la compañía (<code class="font-bold">fiscalyear_lock_date</code>). Al estar cerrado agosto al 31/08, Odoo traslada los ajustes de periodos cerrados al primer día disponible (<code class="font-bold">lock_date + 1</code>). Con el fix de septiembre aplicado, los asientos de septiembre residen en su fecha legítima (30/09) y los cierres de pago en la fecha real de cobro de octubre.
+          </p>
+        </div>
+
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 text-base">Punto 4: Solicitud de Reporte de Gandalf al 100%</h4>
+          <p class="text-gray-600 mt-1 leading-relaxed">
+            <strong>Disponibilidad y Alcance:</strong> La Acción de Servidor oficial <code class="font-bold">1601</code> en Odoo genera el reporte completo con 3 hojas de cálculo XML SpreadsheetML (Resumen general de partners, Detalle analítico por factura y Pólizas no relacionadas/huérfanas), cubriendo tanto clientes como proveedores con el 100% de los movimientos auditables.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buscador Interactivo de las 185 Facturas -->
+    <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">4. Padrón Detallado de Facturas Corregidas (185 Facturas)</h2>
+          <p class="text-xs text-gray-600">Busca por folio, ID de Odoo o filtra por partner para verificar el estado individual de cada documento.</p>
+        </div>
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <input type="text" id="searchInput" placeholder="Buscar folio, partner, ID..." class="px-3 py-1.5 border border-gray-300 rounded-lg text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-red-700">
+          <select id="roleFilter" class="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700">
+            <option value="ALL">Todos los roles</option>
+            <option value="Cliente">Clientes</option>
+            <option value="Proveedor">Proveedores</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto max-h-96 border border-gray-200 rounded-lg">
+        <table class="min-w-full divide-y divide-gray-200 text-xs">
+          <thead class="bg-gray-100 text-gray-600 uppercase font-semibold sticky top-0">
+            <tr>
+              <th class="py-2.5 px-3 text-left">ID Odoo</th>
+              <th class="py-2.5 px-3 text-left">Folio</th>
+              <th class="py-2.5 px-3 text-left">Partner</th>
+              <th class="py-2.5 px-3 text-center">Rol</th>
+              <th class="py-2.5 px-3 text-right">Importe USD</th>
+              <th class="py-2.5 px-3 text-right">Saldo Base MXN</th>
+              <th class="py-2.5 px-3 text-right">Descuadre ANTES (MXN)</th>
+              <th class="py-2.5 px-3 text-right">Descuadre DESPUÉS</th>
+              <th class="py-2.5 px-3 text-center">Estatus</th>
+            </tr>
+          </thead>
+          <tbody id="invoiceTableBody" class="divide-y divide-gray-100">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2 text-right">Mostrando <span id="displayedCount">185</span> de 185 facturas auditadas</p>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 space-y-1">
+      <p><strong>Vauxoo S.A. de C.V.</strong> — Soluciones Tecnológicas y Consultoría Odoo Enterprise</p>
+      <p>Reporte generado automáticamente para Sinergy Logística y Traslados de Vanguardia | Staging Odoo 17.0+e</p>
+    </div>
+  </footer>
+
+  <script>
+    const invoicesData = [{"id": 1226515, "name": "INV/2026/09887 (TLVA30652)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2330.0, "mxn_base": 40047.57, "diff_before": 1522.66, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1226645, "name": "INV/2026/09921 (TLVA30728)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41250.72, "diff_before": 1568.4, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1226660, "name": "INV/2026/09936 (TLVA30732)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41250.72, "diff_before": 1568.4, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1226954, "name": "INV/2026/10037 (TLVA30746)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41311.2, "diff_before": 1507.92, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227017, "name": "INV/2026/10084 (TLVA30745)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41311.2, "diff_before": 1507.92, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227310, "name": "INV/2026/10199 (TLVA30831)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41311.2, "diff_before": 1507.92, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227435, "name": "INV/2026/10249 (TLVA30864)", "partner": "AGRICOLA ZARATTINI", "role": "Cliente", "type": "out_invoice", "usd": 1148.41, "mxn_base": 19922.15, "diff_before": 566.86, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227447, "name": "INV/2026/10261 (TLVA30865)", "partner": "AGRICOLA ZARATTINI", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2255.2, "diff_before": 64.17, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227460, "name": "INV/2026/10274 (TLVA30866)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41634.48, "diff_before": 1184.64, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1227464, "name": "INV/2026/10278 (TLVA30867)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41634.48, "diff_before": 1184.64, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1229545, "name": "INV/2026/10470 (TLVA30908)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41752.32, "diff_before": 1066.8, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1229555, "name": "INV/2026/10480 (TLVA30902)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41752.32, "diff_before": 1066.8, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1229470, "name": "INV/2026/10395 (TLVA30945)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41505.12, "diff_before": 1314.0, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1229477, "name": "INV/2026/10402 (TLVA30944)", "partner": "COMERCIALIZADORA AGRESTE", "role": "Cliente", "type": "out_invoice", "usd": 2400.0, "mxn_base": 41505.12, "diff_before": 1314.0, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1353149, "name": "INV/2026/15430 (TLVA32791)", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2270.26, "diff_before": 49.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1353553, "name": "INV/2026/15494 (TLVA32844)", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2267.72, "diff_before": 51.65, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1347861, "name": "INV-O/2026/00291", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 58.0, "mxn_base": 1008.68, "diff_before": 26.12, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416601, "name": "INV/2026/18100 (TLVA33797)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49693.54, "diff_before": 2547.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416603, "name": "INV/2026/18102 (TLVA33804)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 13991.41, "diff_before": 717.32, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416614, "name": "INV/2026/18113 (TLVA33801)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76839.48, "diff_before": 3939.5, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416615, "name": "INV/2026/18114 (TLVA33808)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 13991.41, "diff_before": 717.32, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416619, "name": "INV/2026/18118 (TLVA33798)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30403.45, "diff_before": 1558.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416621, "name": "INV/2026/18120 (TLVA33811)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49693.54, "diff_before": 2547.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416633, "name": "INV/2026/18132 (TLVA33806)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1546.0, "mxn_base": 26237.48, "diff_before": 1345.17, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416634, "name": "INV/2026/18133 (TLVA33812)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30403.45, "diff_before": 1558.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416720, "name": "BILL/2026/08/0853 (RG-3631)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18237.94, "diff_before": 935.04, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416721, "name": "BILL/2026/08/0854 (RG-3632)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1266.16, "mxn_base": -21488.25, "diff_before": 1101.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416722, "name": "BILL/2026/08/0852 (RG-3630)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1495.98, "mxn_base": -25388.64, "diff_before": 1301.65, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416723, "name": "BILL/2026/08/0850 (RG-3628)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1436.4, "mxn_base": -24377.43, "diff_before": 1249.81, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416724, "name": "BILL/2026/08/0851 (RG-3629)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1436.4, "mxn_base": -24377.43, "diff_before": 1249.81, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417227, "name": "BILL/2026/08/0879 (RG-3639)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1566.53, "mxn_base": -26585.94, "diff_before": 1363.04, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417700, "name": "BILL/2026/08/0884 (RG-3633)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1566.53, "mxn_base": -26585.94, "diff_before": 1363.04, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419387, "name": "BILL/2026/08/0897 (30107)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -3250.29, "mxn_base": -55079.41, "diff_before": 2909.99, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419388, "name": "BILL/2026/08/0918 (30130)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -3412.55, "mxn_base": -57829.07, "diff_before": 3055.26, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419399, "name": "BILL/2026/08/0896 (30106)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419400, "name": "BILL/2026/08/0900 (30110)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419401, "name": "BILL/2026/08/0898 (30108)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419402, "name": "BILL/2026/08/0903 (30114)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419403, "name": "BILL/2026/08/0899 (30109)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419404, "name": "BILL/2026/08/0904 (30115)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419405, "name": "BILL/2026/08/0902 (30112)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419406, "name": "BILL/2026/08/0901 (30111)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419407, "name": "BILL/2026/08/0905 (30116)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2787.22, "mxn_base": -47232.23, "diff_before": 2495.4, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419408, "name": "BILL/2026/08/0906 (30117)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419409, "name": "BILL/2026/08/0907 (30118)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419410, "name": "BILL/2026/08/0908 (30119)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419411, "name": "BILL/2026/08/0909 (30120)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419412, "name": "BILL/2026/08/0910 (30121)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419413, "name": "BILL/2026/08/0911 (30122)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419414, "name": "BILL/2026/08/0912 (30123)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2787.21, "mxn_base": -47232.06, "diff_before": 2495.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419415, "name": "BILL/2026/08/0913 (30124)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419416, "name": "BILL/2026/08/0914 (30125)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419417, "name": "BILL/2026/08/0915 (30127)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419418, "name": "BILL/2026/08/0916 (30128)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419419, "name": "BILL/2026/08/0917 (30129)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419420, "name": "BILL/2026/08/0919 (30133)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419421, "name": "BILL/2026/08/0922 (30137)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419422, "name": "BILL/2026/08/0920 (30134)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419423, "name": "BILL/2026/08/0921 (30135)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419424, "name": "BILL/2026/08/0924 (30139)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419425, "name": "BILL/2026/08/0923 (30138)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2928.11, "mxn_base": -49619.75, "diff_before": 2621.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419426, "name": "BILL/2026/08/0925 (30141)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -4437.27, "mxn_base": -75193.98, "diff_before": 3972.69, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419427, "name": "BILL/2026/08/0926 (30142)", "partner": "VTS CARRIERS, LLC", "role": "Proveedor", "type": "in_invoice", "usd": -2787.22, "mxn_base": -47232.23, "diff_before": 2495.4, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416939, "name": "INV/2026/18146 (TLVA33830)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19599.11, "diff_before": 918.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416946, "name": "INV/2026/18153 (TLVA33843)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1546.0, "mxn_base": 26348.01, "diff_before": 1234.64, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416949, "name": "INV/2026/18156 (TLVA33827)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77163.21, "diff_before": 3615.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416963, "name": "INV/2026/18170 (TLVA33857)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2215.55, "diff_before": 103.82, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416980, "name": "INV/2026/18187 (TLVA33821)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2215.55, "diff_before": 103.82, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416981, "name": "INV/2026/18188 (TLVA33852)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25720.16, "diff_before": 1205.22, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416989, "name": "INV/2026/18196 (TLVA33829)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77163.21, "diff_before": 3615.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416998, "name": "INV/2026/18205 (TLVA33840)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30531.55, "diff_before": 1430.66, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416999, "name": "INV/2026/18206 (TLVA33839)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49902.9, "diff_before": 2338.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417009, "name": "INV/2026/18216 (TLVA33853)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14050.35, "diff_before": 658.38, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417011, "name": "INV/2026/18218 (TLVA33848)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14050.35, "diff_before": 658.38, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417020, "name": "INV/2026/18227 (TLVA33822)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77163.21, "diff_before": 3615.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417022, "name": "INV/2026/18229 (TLVA33823)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77163.21, "diff_before": 3615.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417025, "name": "INV/2026/18232 (TLVA33851)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19599.11, "diff_before": 918.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417027, "name": "INV/2026/18234 (TLVA33847)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25720.16, "diff_before": 1205.22, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416897, "name": "INV/2026/18135", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 850.74, "diff_before": 41.33, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416898, "name": "INV/2026/18136", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 850.74, "diff_before": 41.33, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416899, "name": "INV/2026/18137", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 850.74, "diff_before": 41.33, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416900, "name": "INV/2026/18138", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 850.74, "diff_before": 41.33, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416901, "name": "INV/2026/18139", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 58.0, "mxn_base": 986.86, "diff_before": 47.95, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416913, "name": "INV/2026/18140", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 28408.35, "mxn_base": 483359.56, "diff_before": 23482.34, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416960, "name": "INV/2026/18167 (TLVA33863)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77036.44, "diff_before": 3742.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417280, "name": "INV/2026/18276 (TLVA33898)", "partner": "ZEBRA LOGISTICS, INC", "role": "Cliente", "type": "out_invoice", "usd": 1199.9, "mxn_base": 20416.01, "diff_before": 991.84, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417284, "name": "INV/2026/18280 (TLVA33905)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19566.91, "diff_before": 950.59, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417303, "name": "INV/2026/18299 (TLVA33886)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49820.91, "diff_before": 2420.38, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417328, "name": "INV/2026/18324 (TLVA33882)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4849.82, "mxn_base": 82518.23, "diff_before": 4008.86, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417329, "name": "INV/2026/18325 (TLVA33887)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30481.38, "diff_before": 1480.83, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417331, "name": "INV/2026/18327 (TLVA33877)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77036.44, "diff_before": 3742.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417337, "name": "INV/2026/18333 (TLVA33903)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14027.28, "diff_before": 681.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417351, "name": "INV/2026/18347 (TLVA33880)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25677.9, "diff_before": 1247.48, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417354, "name": "INV/2026/18350 (TLVA33885)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2211.91, "diff_before": 107.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417358, "name": "INV/2026/18354 (TLVA33879)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19566.91, "diff_before": 950.59, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417363, "name": "INV/2026/18359 (TLVA33897)", "partner": "ZEBRA LOGISTICS, INC", "role": "Cliente", "type": "out_invoice", "usd": 1199.9, "mxn_base": 20416.01, "diff_before": 991.84, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417367, "name": "INV/2026/18363 (TLVA33881)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14027.28, "diff_before": 681.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417370, "name": "INV/2026/18366 (TLVA33875)", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2211.91, "diff_before": 107.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417380, "name": "INV/2026/18376 (TLVA33895)", "partner": "ZEBRA LOGISTICS, INC", "role": "Cliente", "type": "out_invoice", "usd": 1199.9, "mxn_base": 20416.01, "diff_before": 991.84, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417389, "name": "INV/2026/18385 (TLVA33864)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77036.44, "diff_before": 3742.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417407, "name": "INV/2026/18403 (TLVA33909)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2211.91, "diff_before": 107.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417409, "name": "INV/2026/18405 (TLVA33866)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19566.91, "diff_before": 950.59, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417415, "name": "INV/2026/18411 (TLVA33878)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 77036.44, "diff_before": 3742.54, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417423, "name": "INV/2026/18419 (TLVA33876)", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2211.91, "diff_before": 107.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417424, "name": "INV/2026/18420 (TLVA33910)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2211.91, "diff_before": 107.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417429, "name": "INV/2026/18425 (TLVA33902)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25677.9, "diff_before": 1247.48, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417225, "name": "BILL/2026/09/0054 (RG-3649)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -2641.17, "mxn_base": -45012.71, "diff_before": 2109.24, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417226, "name": "BILL/2026/09/0055 (RG-3655)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1266.16, "mxn_base": -21578.78, "diff_before": 1011.15, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417228, "name": "BILL/2026/09/0056 (RG-3658)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1495.98, "mxn_base": -25453.71, "diff_before": 1236.58, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417277, "name": "INV/2026/18273 (TLVA33916)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76858.95, "diff_before": 3920.03, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417286, "name": "INV/2026/18282 (TLVA33922)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49706.13, "diff_before": 2535.16, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417290, "name": "INV/2026/18286 (TLVA33915)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76858.95, "diff_before": 3920.03, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417311, "name": "INV/2026/18307 (TLVA33919)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30411.16, "diff_before": 1551.05, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417318, "name": "INV/2026/18314 (TLVA33935)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76858.95, "diff_before": 3920.03, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417325, "name": "INV/2026/18321 (TLVA33917)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76858.95, "diff_before": 3920.03, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417342, "name": "INV/2026/18338 (TLVA33918)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49706.13, "diff_before": 2535.16, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417359, "name": "INV/2026/18355 (TLVA33926)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 13994.96, "diff_before": 713.78, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417410, "name": "INV/2026/18406 (TLVA33923)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30411.16, "diff_before": 1551.05, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417442, "name": "INV/2026/18438 (TLVA33925)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25618.75, "diff_before": 1306.63, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417558, "name": "BILL/2026/09/0073 (RG-3662)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18284.68, "diff_before": 888.29, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417559, "name": "BILL/2026/09/0074 (RG-3667)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1566.53, "mxn_base": -26592.67, "diff_before": 1356.3, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417678, "name": "BILL/2026/09/0075 (RG-3661)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18284.68, "diff_before": 888.29, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417679, "name": "BILL/2026/09/0076 (RG-3664)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1149.12, "mxn_base": -19551.93, "diff_before": 949.86, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1417691, "name": "BILL/2026/09/0084 (RG-3659)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1566.53, "mxn_base": -26654.09, "diff_before": 1294.89, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418146, "name": "INV/2026/18467 (TLVA33975)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25633.38, "diff_before": 1292.0, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418154, "name": "INV/2026/18475 (TLVA33976)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14002.95, "diff_before": 705.78, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418165, "name": "INV/2026/18486 (TLVA33944)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76902.87, "diff_before": 3876.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418213, "name": "INV/2026/18533 (TLVA33956)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76902.87, "diff_before": 3876.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418220, "name": "INV/2026/18540 (TLVA33962)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 824.42, "mxn_base": 14002.95, "diff_before": 705.78, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418223, "name": "INV/2026/18543 (TLVA33961)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25633.38, "diff_before": 1292.0, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418235, "name": "INV/2026/18555 (TLVA33979)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76902.87, "diff_before": 3876.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1418281, "name": "INV/2026/18601 (TLVA33943)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76902.87, "diff_before": 3876.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419515, "name": "BILL/2026/09/0172 (RG-3689)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18252.98, "diff_before": 919.99, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419516, "name": "BILL/2026/09/0173 (RG-3673)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1566.53, "mxn_base": -26592.67, "diff_before": 1356.3, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419631, "name": "BILL/2026/09/0188 (RG-3697)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1436.4, "mxn_base": -24355.6, "diff_before": 1271.64, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1419635, "name": "BILL/2026/09/0192 (RG-3698)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1500.24, "mxn_base": -25438.07, "diff_before": 1328.16, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1361499, "name": "BILL/2026/08/0445 (INVOICE 2838)", "partner": "ALCALA EXPRESS LLC", "role": "Proveedor", "type": "in_invoice", "usd": -1430.0, "mxn_base": -24623.89, "diff_before": 889.17, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1411251, "name": "INV/2026/16749 (TLVA33286)", "partner": "YUSEN LOGISTICS (MEXICO)", "role": "Cliente", "type": "out_invoice", "usd": 1069.55, "mxn_base": 18249.5, "diff_before": 832.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414037, "name": "BILL/2026/08/0674 (INVOICE 2847)", "partner": "ALCALA EXPRESS LLC", "role": "Proveedor", "type": "in_invoice", "usd": -1370.0, "mxn_base": -23362.61, "diff_before": 1079.97, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414039, "name": "BILL/2026/08/0679 (INVOICE 2861)", "partner": "ALCALA EXPRESS LLC", "role": "Proveedor", "type": "in_invoice", "usd": -1330.0, "mxn_base": -22563.06, "diff_before": 1165.88, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414305, "name": "BILL/2026/08/0700 (RG-3568)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1500.24, "mxn_base": -25443.02, "diff_before": 1323.21, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414307, "name": "BILL/2026/08/0702 (RG-3597)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -2641.17, "mxn_base": -44640.58, "diff_before": 2481.38, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414309, "name": "BILL/2026/08/0699 (RG-3567)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1495.98, "mxn_base": -25370.85, "diff_before": 1319.46, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414310, "name": "BILL/2026/08/0703 (RG-3598)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1266.16, "mxn_base": -21400.38, "diff_before": 1189.56, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414311, "name": "BILL/2026/08/0701 (RG-3595)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -2641.17, "mxn_base": -44640.58, "diff_before": 2481.38, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414317, "name": "INV/2026/17671", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 58.0, "mxn_base": 982.87, "diff_before": 51.93, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414320, "name": "BILL/2026/08/0704 (RG-3596)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1266.16, "mxn_base": -21400.38, "diff_before": 1189.56, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414321, "name": "INV/2026/17673", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 58.0, "mxn_base": 982.87, "diff_before": 51.93, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414322, "name": "INV/2026/17674", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 847.3, "diff_before": 44.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414323, "name": "INV/2026/17675", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 847.3, "diff_before": 44.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414324, "name": "INV/2026/17676", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 50.0, "mxn_base": 847.3, "diff_before": 44.77, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414328, "name": "INV/2026/17677", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 58.0, "mxn_base": 982.87, "diff_before": 51.93, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414501, "name": "INV/2026/17768 (TLVA33717)", "partner": "AUTOTRANSPORTES PIRAMIDE", "role": "Cliente", "type": "out_invoice", "usd": 145.0, "mxn_base": 2457.17, "diff_before": 129.82, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414502, "name": "INV/2026/17769 (TLVA33718)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414536, "name": "INV/2026/17803 (TLVA33721)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414563, "name": "INV/2026/17830 (TLVA33709)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1220.0, "mxn_base": 20674.12, "diff_before": 1092.27, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414566, "name": "INV/2026/17833 (TLVA33714)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414570, "name": "INV/2026/17837 (TLVA33701)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414571, "name": "INV/2026/17838 (TLVA33720)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414579, "name": "INV/2026/17846 (TLVA33695)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2202.98, "diff_before": 116.39, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414612, "name": "BILL/2026/08/0764 (RG-3610)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18230.94, "diff_before": 942.02, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414614, "name": "BILL/2026/08/0763 (RG-3603)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1500.24, "mxn_base": -25451.13, "diff_before": 1315.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1414615, "name": "BILL/2026/08/0762 (RG-3602)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1500.24, "mxn_base": -25451.13, "diff_before": 1315.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1415609, "name": "BILL/2026/08/0792 (RG-3609)", "partner": "REYCAR GO", "role": "Proveedor", "type": "in_invoice", "usd": -1074.64, "mxn_base": -18230.94, "diff_before": 942.02, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1415615, "name": "INV/2026/17876", "partner": "RACING CARGO USA, INC", "role": "Cliente", "type": "out_invoice", "usd": 700.0, "mxn_base": 11876.2, "diff_before": 612.71, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1415617, "name": "INV/2026/17878", "partner": "RACING CARGO USA, INC", "role": "Cliente", "type": "out_invoice", "usd": 1600.0, "mxn_base": 27145.6, "diff_before": 1400.48, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1415618, "name": "INV/2026/17879", "partner": "RACING CARGO USA, INC", "role": "Cliente", "type": "out_invoice", "usd": 1600.0, "mxn_base": 27145.6, "diff_before": 1400.48, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416059, "name": "INV/2026/17895 (TLVA33761)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2205.58, "diff_before": 113.79, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416072, "name": "INV/2026/17907 (TLVA33737)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19510.9, "diff_before": 1006.6, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416083, "name": "INV/2026/17918 (TLVA33756)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2205.58, "diff_before": 113.79, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416123, "name": "INV/2026/17957 (TLVA33755)", "partner": "EC LOGISTICS WORLDWIDE LLC", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2205.58, "diff_before": 113.79, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416062, "name": "INV/2026/17898 (TLVA33768)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76839.48, "diff_before": 3939.5, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416090, "name": "INV/2026/17925 (TLVA33771)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1546.0, "mxn_base": 26237.48, "diff_before": 1345.17, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416211, "name": "INV/2026/18018 (TLVA33775)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49693.54, "diff_before": 2547.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416217, "name": "INV/2026/18024 (TLVA33778)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76839.48, "diff_before": 3939.5, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416228, "name": "INV/2026/18035 (TLVA33776)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30403.45, "diff_before": 1558.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416540, "name": "INV/2026/18039 (TLVA33781)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 130.0, "mxn_base": 2206.26, "diff_before": 113.11, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416545, "name": "INV/2026/18044 (TLVA33803)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25612.26, "diff_before": 1313.12, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416548, "name": "INV/2026/18047 (TLVA33807)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1509.16, "mxn_base": 25612.26, "diff_before": 1313.12, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416549, "name": "INV/2026/18048 (TLVA33787)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 4527.64, "mxn_base": 76839.48, "diff_before": 3939.5, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416556, "name": "INV/2026/18055 (TLVA33786)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30403.45, "diff_before": 1558.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416564, "name": "INV/2026/18063 (TLVA33783)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 1791.47, "mxn_base": 30403.45, "diff_before": 1558.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416572, "name": "INV/2026/18071 (TLVA33813)", "partner": "EC LOGISTICS WORLDWIDE DE MEXICO", "role": "Cliente", "type": "out_invoice", "usd": 1150.0, "mxn_base": 19516.88, "diff_before": 1000.62, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416587, "name": "INV/2026/18086 (TLVA33785)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49693.54, "diff_before": 2547.75, "diff_after": 0.0, "status": "Cuadrado 100%"}, {"id": 1416589, "name": "INV/2026/18088 (TLVA33782)", "partner": "KROMBERG & SCHUBERT MEXICO LE", "role": "Cliente", "type": "out_invoice", "usd": 2928.11, "mxn_base": 49693.54, "diff_before": 2547.75, "diff_after": 0.0, "status": "Cuadrado 100%"}];
+
+    const tbody = document.getElementById('invoiceTableBody');
+    const searchInput = document.getElementById('searchInput');
+    const roleFilter = document.getElementById('roleFilter');
+    const displayedCount = document.getElementById('displayedCount');
+
+    function renderTable() {
+      const query = searchInput.value.toLowerCase().trim();
+      const role = roleFilter.value;
+
+      const filtered = invoicesData.filter(inv => {
+        const matchesQuery = inv.name.toLowerCase().includes(query) ||
+                             inv.partner.toLowerCase().includes(query) ||
+                             inv.id.toString().includes(query);
+        const matchesRole = (role === 'ALL') || (inv.role === role);
+        return matchesQuery && matchesRole;
+      });
+
+      tbody.innerHTML = filtered.map(inv => `
+        <tr class="hover:bg-gray-50">
+          <td class="py-2 px-3 font-mono text-gray-500">${inv.id}</td>
+          <td class="py-2 px-3 font-bold text-gray-900">${inv.name}</td>
+          <td class="py-2 px-3 text-gray-700">${inv.partner}</td>
+          <td class="py-2 px-3 text-center">
+            <span class="${inv.role === 'Cliente' ? 'badge-cliente' : 'badge-proveedor'} px-2 py-0.5 rounded-full text-[10px] font-medium">
+              ${inv.role}
+            </span>
+          </td>
+          <td class="py-2 px-3 text-right font-medium">$${inv.usd.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+          <td class="py-2 px-3 text-right text-gray-600">$${inv.mxn_base.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+          <td class="py-2 px-3 text-right text-red-600 font-bold">$${inv.diff_before.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+          <td class="py-2 px-3 text-right text-green-600 font-bold">$0.00</td>
+          <td class="py-2 px-3 text-center">
+            <span class="badge-cuadrado px-2 py-0.5 rounded text-[10px] font-bold">✓ Cuadrado</span>
+          </td>
+        </tr>
+      `).join('');
+
+      displayedCount.textContent = filtered.length;
+    }
+
+    searchInput.addEventListener('input', renderTable);
+    roleFilter.addEventListener('change', renderTable);
+
+    renderTable();
+  </script>
+</body>
+</html>
