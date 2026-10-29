@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informe Ejecutivo: Auditoría y Corrección de Revaluación Gandalf (Antes vs. Después) | Vauxoo</title>
+  <title>Auditoría y Resolución de Revaluación Gandalf (Antes vs. Después) | Vauxoo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -281,15 +281,15 @@
       </div>
     </div>
 
-    <!-- Casos de Muestra Emblemáticos -->
+    <!-- Casos de Muestra Compartidos -->
     <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
-      <h2 class="text-lg font-bold text-gray-900 mb-4">2. Análisis de Casos de Muestra Documentados por el Cliente</h2>
+      <h2 class="text-lg font-bold text-gray-900 mb-4">2. Análisis de Casos de Muestra Compartidos</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Caso 1: INV/2026/18134 (Hoja EJERCICIO) -->
         <div class="border border-gray-200 rounded-lg p-5 bg-gray-50">
           <div class="flex justify-between items-start">
-            <span class="text-xs font-bold text-red-800 bg-red-100 px-2 py-0.5 rounded">Caso Hoja EJERCICIO del Cliente</span>
+            <span class="text-xs font-bold text-red-800 bg-red-100 px-2 py-0.5 rounded">Caso Hoja EJERCICIO</span>
             <span class="badge-cuadrado text-xs px-2 py-0.5 rounded font-bold">Resuelto $0.00</span>
           </div>
           <h3 class="font-bold text-base text-gray-900 mt-2">Factura INV/2026/18134 (EC LOGISTICS)</h3>
@@ -297,7 +297,7 @@
           
           <div class="mt-4 space-y-2 text-xs">
             <div class="p-2.5 bg-red-50 border border-red-200 rounded text-red-800">
-              <p class="font-semibold">⚠️ Situación reportada por el cliente:</p>
+              <p class="font-semibold">⚠️ Comportamiento previo observado:</p>
               <p class="mt-0.5">Se creó la póliza <code class="font-bold">REV/2026/09/002498</code> al 01/09/2026 con abono de -$4,353.57 MXN que cancelaba la revaluación del 30/09/2026, dejando el saldo desfasado.</p>
             </div>
             <div class="p-2.5 bg-green-50 border border-green-200 rounded text-green-800">
@@ -318,7 +318,7 @@
           
           <div class="mt-4 space-y-2 text-xs">
             <div class="p-2.5 bg-red-50 border border-red-200 rounded text-red-800">
-              <p class="font-semibold">⚠️ Situación reportada por el cliente:</p>
+              <p class="font-semibold">⚠️ Comportamiento previo observado:</p>
               <p class="mt-0.5">Descuadre de -$1,029.60 MXN en el reporte de Cuenta Antigua por Cobrar al 30/09/2026 por anulación prematura al 01/09/2026.</p>
             </div>
             <div class="p-2.5 bg-green-50 border border-green-200 rounded text-green-800">
@@ -330,28 +330,28 @@
       </div>
     </div>
 
-    <!-- Dictamen y Respuestas a los Puntos de la Carta -->
+    <!-- Dictamen y Respuestas Técnicas -->
     <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 space-y-6">
-      <h2 class="text-lg font-bold text-gray-900 border-b pb-3">3. Respuestas Ejecutivas a las Solicitudes de Sinergy</h2>
+      <h2 class="text-lg font-bold text-gray-900 border-b pb-3">3. Respuestas y Aclaraciones Técnicas</h2>
 
       <div class="space-y-4 text-sm">
         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 text-base">Punto 1: Causa raíz, alcance y corrección de las diferencias</h4>
+          <h4 class="font-bold text-gray-900 text-base">1. Causa raíz, alcance y resolución de las diferencias</h4>
           <p class="text-gray-600 mt-1 leading-relaxed">
             <strong>Causa Raíz:</strong> Las facturas observadas se cobraron/pagaron durante los primeros días de octubre (ej. 02/10/2026). Al correrse la revaluación de septiembre en fecha posterior (14 de octubre), el sistema detectó que la factura ya estaba en estatus pagada y detonó una regla de limpieza en el primer día del mes abierto (<code class="font-bold">01/09/2026</code>), asumiendo erróneamente que la factura ya estaba pagada en septiembre.<br>
-            <strong>Alcance y Corrección:</strong> El alcance total fue de <strong>185 facturas en 12 partners</strong> con un impacto de $332,373.61 MXN. La corrección ya fue aplicada en Staging con el commit <code class="font-bold">e216189</code> y todas las partidas quedaron cuadradas al 100% ($0.00 de diferencia). Se descartó cualquier afectación en otros periodos anteriores.
+            <strong>Alcance y Resolución:</strong> El alcance total fue de <strong>185 facturas en 12 partners</strong> con un impacto de $332,373.61 MXN. La corrección ya fue aplicada en Staging con el commit <code class="font-bold">e216189</code> y todas las partidas quedaron cuadradas al 100% ($0.00 de diferencia). Se descartó cualquier afectación en otros periodos anteriores.
           </p>
         </div>
 
         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 text-base">Punto 2: Facturas con Notas de Crédito (NC) aplicadas</h4>
+          <h4 class="font-bold text-gray-900 text-base">2. Facturas con Notas de Crédito (NC) aplicadas</h4>
           <p class="text-gray-600 mt-1 leading-relaxed">
             <strong>Confirmación y Automatización:</strong> Es 100% correcto que al conciliar una factura con una Nota de Crédito el sistema debe neutralizar la revaluación previa. En la versión actual de Gandalf, <strong>el proceso es totalmente automático</strong>: al ejecutar la revaluación, Odoo detecta la conciliación parcial contra la NC y genera la póliza de ajuste correspondiente sin requerir reversas manuales por parte del equipo contable.
           </p>
         </div>
 
         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 text-base">Punto 3: Asientos de revaluación creados el 01/10</h4>
+          <h4 class="font-bold text-gray-900 text-base">3. Asientos de revaluación creados el 01/10</h4>
           <p class="text-gray-600 mt-1 leading-relaxed">
             <strong>Explicación Técnica:</strong> La generación de pólizas el primer día de un mes ocurre exclusivamente cuando la fecha económica de la revaluación se encuentra en un periodo fiscal cerrado por la compañía (<code class="font-bold">fiscalyear_lock_date</code>). Al estar cerrado agosto al 31/08, Odoo traslada los ajustes de periodos cerrados al primer día disponible (<code class="font-bold">lock_date + 1</code>). Con el fix de septiembre aplicado, los asientos de septiembre residen en su fecha legítima (30/09) y los cierres de pago en la fecha real de cobro de octubre.
           </p>
